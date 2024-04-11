@@ -1,0 +1,25 @@
+html {
+  /* Quicksand font is import via <link> tag's in index.html */
+  font-family: 'Quicksand', monospace, sans-serif;
+  /* font-size: 32px; */
+}
+
+/* the parent container */
+.emrem-parent {
+  font-size: 32px;
+}
+
+.base {
+  font-size: 16px;
+}
+
+/* em's are relative to the element's parent's font-size */
+.em {
+  font-size: 1em;
+}
+
+/* rem's are relative to the html tag's font-size - defaults to 16px */
+/* we can change this default size if we want - usually in media queries */
+.rem {
+  font-size: 2rem;
+}

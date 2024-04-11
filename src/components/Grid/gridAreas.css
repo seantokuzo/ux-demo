@@ -1,0 +1,54 @@
+.area-text {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.container {
+  /* border: 1px solid red; */
+  width: fit-content;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 300px 300px 100px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'header header sidebar'
+    'item1 item2 sidebar'
+    'item1 item2 sidebar'
+    'footer footer sidebar';
+}
+
+.box {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.header {
+  grid-area: header;
+  background-color: purple;
+}
+
+.box1 {
+  grid-area: item1;
+  background-color: red;
+}
+
+.box2 {
+  grid-area: item2;
+  background-color: blue;
+}
+
+.box3 {
+  background-color: green;
+  grid-area: sidebar;
+}
+
+.footer {
+  background-color: yellow;
+  grid-area: footer;
+}

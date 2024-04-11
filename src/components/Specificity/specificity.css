@@ -1,0 +1,27 @@
+.specificity-container {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.specificity-container h5 {
+  font-size: 3rem;
+}
+
+/* id SELECTOR */
+#specificity-text {
+  color: red;
+}
+
+/* class SELECTOR */
+.specificity-text {
+  color: blue;
+}
+
+/* **CASCADING** STYLE SHEET */
+h5 {
+  color: purple;
+}
+
+h5 {
+  color: green;
+}

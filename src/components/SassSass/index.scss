@@ -1,0 +1,51 @@
+// Notice how comments are different in Sass:
+// using // comment vs /* comment */
+
+// importing styles with Sass
+@import 'variables';
+
+.sass {
+  // font-family: $font;
+  font-size: 2rem;
+  border: 2px solid black;
+
+  // this is how we use mixins
+  @include flex-it;
+
+  // can also supply arguments to the mixins
+  // @include flex-it(column);
+
+  // NESTING CLASSNAMES
+  // &-box === .sass-box when nested within .sass{}
+  &-box {
+    margin: 0;
+    width: 175px;
+    height: 175px;
+    cursor: pointer;
+
+    // nesting type selectors
+    // this selects <p> tags within elements with a class of .sass-box
+    p {
+      margin: 0;
+    }
+
+    @include flex-it;
+    @include transition;
+
+    // NESTING PSEUDO-CLASSES
+    &:nth-child(odd) {
+      background-color: $blue;
+    }
+
+    &:nth-child(even) {
+      background-color: $red;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: $gold;
+
+      @include shadow;
+    }
+  }
+}

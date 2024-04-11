@@ -1,0 +1,57 @@
+.media-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+.media-section {
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.5rem;
+}
+
+.media-section:nth-child(odd) {
+  background-color: blue;
+}
+
+.media-section:nth-child(even) {
+  background-color: red;
+}
+
+@media screen and (min-width: 600px) {
+  .media-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .media-section {
+    width: 175px;
+    height: 175px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .media-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .media-section {
+    width: 300px;
+    height: 300px;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,35 @@
+.flex-container {
+  border: 2px solid black;
+  width: 75vw;
+  height: 500px;
+
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-box {
+  width: 100px;
+}
+
+.flex-box1 {
+  /* align-self: flex-end; */
+  height: 50px;
+  background-color: purple;
+}
+
+.flex-box2 {
+  height: 150px;
+  background-color: green;
+}
+
+.flex-box3 {
+  height: 100px;
+  background-color: red;
+}
+
+.flex-box3:nth-child(even) {
+  background-color: blue;
+}

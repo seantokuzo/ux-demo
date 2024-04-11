@@ -1,0 +1,75 @@
+/* we can set variables in css in the :root pseudo class */
+/* we set variables by prefixing the variable name with -- */
+:root {
+  --btn-blue: #06b6d4;
+  --btn-bs: inset 11px 11px 14px #0597b0, inset -11px -11px 14px #07d5f8;
+  --btn-bs-hover: 11px 11px 14px #0597b0, -11px -11px 14px #07d5f8;
+}
+
+.pseudo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* this is how we utilize css variable */
+  background-color: var(--btn-blue);
+}
+
+.pseudo-btn {
+  font-family: 'Quicksand';
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+
+  cursor: pointer;
+
+  box-shadow: var(--btn-bs);
+  background-color: var(--btn-blue);
+
+  transition: all 150ms;
+}
+
+.pseudo-btn:hover {
+  box-shadow: var(--btn-bs-hover);
+  transform: scale(1.1);
+}
+
+.pseudo-btn:active {
+  box-shadow: var(--btn-bs);
+  transform: scale(1.1);
+}
+
+.pseudo-btn:focus {
+  border: 5px solid red;
+}
+
+.pseudo-box {
+  width: 50px;
+  height: 50px;
+}
+
+.pseudo-box:nth-child(odd) {
+  background-color: blue;
+}
+
+.pseudo-box:nth-child(even) {
+  background-color: red;
+}
+
+.pseudo-box:first-child {
+  background-color: green;
+}
+
+.pseudo-box:last-child {
+  background-color: purple;
+}

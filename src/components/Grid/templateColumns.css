@@ -1,0 +1,17 @@
+.col-container {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+}
+
+.col-box {
+  border: 2px solid black;
+  height: 100px;
+}
+
+.col-box:nth-child(even) {
+  background-color: black;
+}
+
+.col-box:nth-child(odd) {
+  background-color: white;
+}
